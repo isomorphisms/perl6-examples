@@ -1,3 +1,5 @@
+#!/usr/bin/env perl6
+
 use v6;
 
 =begin pod
@@ -12,7 +14,7 @@ name a different list of words.
 
 =head1 USAGE
 
-    perl6 hangment.p6
+    perl6 hangman.p6
 
 =end pod
 
@@ -194,7 +196,7 @@ sub MAIN($word-file-name = "/usr/share/dict/words") {
         $lose-state.worsen unless $win-state.guess($letter);
 
         if $win-state.is-winner {
-            say qq:to/END_OF_WIN/;
+            say q:to/END_OF_WIN/;
                 /----|
                 |
                 |  \😅/
